@@ -10,11 +10,8 @@ SUPABASE_URL = st.secrets["SUPABASE_URL"]
 SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
 
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
-@st.cache_resource
-def load_model():
-    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-model = load_model()
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", cache_folder=".cache")
 
 # Load data from individual_test_solutions.json
 with open("individual_test_solutions.json", "r", encoding="utf-8") as f:
