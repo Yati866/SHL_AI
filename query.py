@@ -1,6 +1,7 @@
 # query_assessments.py
 
 from sentence_transformers import SentenceTransformer
+import streamlit as st
 import numpy as np
 from supabase import create_client
 from dotenv import load_dotenv
@@ -17,10 +18,10 @@ def embed(text):
     return embedding.tolist()  # Supabase expects a list, not a NumPy array
 
 # ✅ Initialize Supabase client
-supabase = create_client(
-    os.getenv("SUPABASE_URL"),
-    os.getenv("SUPABASE_SERVICE_KEY")
-)
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
+
+supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 # ✅ Querying function
 def query_recommendations(user_query, threshold=0.4, top_k=10):

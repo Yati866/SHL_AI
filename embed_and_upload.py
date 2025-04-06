@@ -1,18 +1,15 @@
-import os
+import streamlit as st
 import json
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 from supabase import create_client
 from sentence_transformers import SentenceTransformer
 
-# Load environment variables
-load_dotenv()
-
 # Initialize Supabase client
-supabase = create_client(
-    os.getenv("SUPABASE_URL"),
-    os.getenv("SUPABASE_SERVICE_KEY")
-)
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
+
+supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 # Initialize embedding model
 model = SentenceTransformer("all-MiniLM-L6-v2")

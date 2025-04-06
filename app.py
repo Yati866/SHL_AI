@@ -1,11 +1,6 @@
 import streamlit as st
-import os
-from dotenv import load_dotenv
 from query import query_recommendations  # your backend file
 import pandas as pd
-
-# Load environment variables
-load_dotenv()
 
 # Page config
 st.set_page_config(page_title="SHL RAG Assistant", page_icon="📘", layout="centered")
