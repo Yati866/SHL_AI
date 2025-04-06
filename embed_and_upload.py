@@ -11,7 +11,7 @@ SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
 
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("./models/all-MiniLM-L6-v2")
 
 # Load data from individual_test_solutions.json
 with open("individual_test_solutions.json", "r", encoding="utf-8") as f:
