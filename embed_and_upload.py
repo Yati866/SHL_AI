@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timezone
 from supabase import create_client
 from sentence_transformers import SentenceTransformer
+import os
 
 # Initialize Supabase client
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
@@ -11,7 +12,8 @@ SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 # Initialize embedding model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer(os.path.join(os.path.dirname(__file__), "all-MiniLM-L6-v2"))
+
 
 # Load data from individual_test_solutions.json
 with open("individual_test_solutions.json", "r", encoding="utf-8") as f:
