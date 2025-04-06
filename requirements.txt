@@ -1,5 +1,4 @@
 # Core dependencies
-streamlit
 requests
 beautifulsoup4
 pandas
@@ -8,12 +7,11 @@ python-dotenv
 # Embedding and ML
 numpy
 torch==2.0.1
-sentence-transformers==2.2.2
 transformers==4.30.2
-
-
-# Supabase
-supabase
+sentence-transformers==2.2.2
+huggingface_hub==0.14.1
+streamlit==1.32.2
+supabase==1.0.3
 
 # Optional (for safety if your environment uses them)
 tqdm
