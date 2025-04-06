@@ -6,7 +6,7 @@ import numpy as np
 from supabase import create_client
 import os
 
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", cache_folder=".cache")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # ✅ Embed function
 def embed(text):
