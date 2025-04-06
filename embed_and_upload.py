@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 from datetime import datetime, timezone
-from dotenv import load_dotenv
 from supabase import create_client
 from sentence_transformers import SentenceTransformer
 

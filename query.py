@@ -4,10 +4,6 @@ from sentence_transformers import SentenceTransformer
 import streamlit as st
 import numpy as np
 from supabase import create_client
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
 
 # ✅ Initialize the model
 model = SentenceTransformer("all-MiniLM-L6-v2")

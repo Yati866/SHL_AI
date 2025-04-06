@@ -8,6 +8,8 @@ python-dotenv
 # Embedding and ML
 sentence-transformers==3.0.1
 numpy
+transformers
+torch
 
 # Supabase
 supabase
