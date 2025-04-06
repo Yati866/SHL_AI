@@ -1,0 +1,17 @@
+# Core dependencies
+streamlit
+requests
+beautifulsoup4
+pandas
+python-dotenv
+
+# Embedding and ML
+sentence-transformers==3.0.1
+numpy
+
+# Supabase
+supabase
+
+# Optional (for safety if your environment uses them)
+tqdm
+urllib3
