@@ -4,9 +4,13 @@ from sentence_transformers import SentenceTransformer
 import streamlit as st
 import numpy as np
 from supabase import create_client
+import os
 
-# ✅ Initialize the model
-model = SentenceTransformer("local_model")
+@st.cache_resource
+def load_model():
+    return SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+model = load_model()
 
 # ✅ Embed function
 def embed(text):
