@@ -12,7 +12,7 @@ SUPABASE_SERVICE_KEY = st.secrets["SUPABASE_SERVICE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
 
 # Initialize embedding model
-model = SentenceTransformer(os.path.join(os.path.dirname(__file__), "all-MiniLM-L6-v2"))
+model = SentenceTransformer("local_model")
 
 
 # Load data from individual_test_solutions.json
