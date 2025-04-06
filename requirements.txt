@@ -6,7 +6,7 @@ pandas
 python-dotenv
 
 # Embedding and ML
-sentence-transformers==3.0.1
+sentence-transformers
 numpy
 transformers
 torch
