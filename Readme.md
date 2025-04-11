@@ -107,8 +107,5 @@
 
 ---
 
-## 📬 Contact
-
-Built by **Ayush Gupta**
 
 ---
